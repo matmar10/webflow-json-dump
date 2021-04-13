@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Simple script that dumps all items in a Webflow CMS Collection to JSON. Useful for creating a file-system based cache of your CMS or other hackery.",
   "main": "index.js",
+  "bin": {
+    "webflow-json-dump": "./bin/cli.js"
+  },
   "dependencies": {
     "bluebird": "^3.7.2",
     "camel-case": "^4.1.2",
