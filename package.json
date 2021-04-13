@@ -1,0 +1,32 @@
+{
+  "name": "webflow-json-dump",
+  "version": "0.0.1",
+  "description": "Simple script that dumps all items in a Webflow CMS Collection to JSON. Useful for creating a file-system based cache of your CMS or other hackery.",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "camel-case": "^4.1.2",
+    "ora": "^5.4.0",
+    "webflow-api": "^0.5.0",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:matmar10/webflow-json-dump.git"
+  },
+  "keywords": [
+    "Webflow",
+    "cache",
+    "cms",
+    "json",
+    "http",
+    "REST",
+    "API"
+  ],
+  "author": "Matthew J. Martin <matthew@blossomfinance.com>",
+  "license": "MIT"
+}
