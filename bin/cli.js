@@ -46,11 +46,11 @@ async function run(argv) {
     end();
 
     start(`Populate all fields for ${items.length} ${collectionName} item(s)`);
-    const populatedItems = await getPopulatedItems(items, collection._id);
+    const output = await getPopulatedItems(items, collection._id);
     end();
 
     if (argv.dump) {
-      const str = JSON.stringify(populatedItems, null, 2);
+      const str = JSON.stringify(output, null, 2);
       console.log(str);
     }
   } catch (err) {
@@ -81,6 +81,19 @@ yargs
           type: 'boolean',
           description: 'Whether to dump the JSON result as stdout',
           default: true
+        })
+        .option('index', {
+          alias: ['x'],
+          type: 'boolean',
+          description: 'If false, output is an array. If set to true, items are indexed by the indexBy option (either slug or id)',
+          default: true
+        })
+        .option('indexBy', {
+          alias: ['b'],
+          type: 'string',
+          choices: ['slug', 'id', 'name'],
+          description: 'What field should be used to index the items in the final output object',
+          default: 'slug'
         })
         .option('apiToken', {
           alias: ['k'],
