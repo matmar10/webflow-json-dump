@@ -33,10 +33,23 @@ webflow-json-dump Posts > posts.json
 
 ## CLI Usage
 
+Basic usage:
+
 ```Bash
 # this will show you how:
-webflow-json-dump --help
+webflow-json-dump Posts
 ```
+Change some of the output property names:
+
+```Bash
+# this would move the "alt" property of each image
+# to the "altText" property
+webflow-json-dump Posts --map.image.alt image.altText
+```
+
+This is useful for sometimes when webflow creates annoying
+names like "summary_2" due to merge conflict. 
+
 
 ## API & Programmatic Usage
 

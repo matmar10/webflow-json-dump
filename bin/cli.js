@@ -113,6 +113,11 @@ yargs
           description: 'If enabled, hides all logging unless there is an error',
           default: false
         })
+        .option('map', {
+          alias: ['m'],
+          type: 'string',
+          description: 'Map source properties to specified destination (uses object-mapper library)',
+        })
       ;
     },
     handler: argv => run(argv),
