@@ -118,6 +118,12 @@ yargs
           type: 'string',
           description: 'Map source properties to specified destination (uses object-mapper library)',
         })
+        .option('wait', {
+          alias: ['w'],
+          type: 'number',
+          description: 'Delay (in milliseconds) between each request',
+          default: 1200
+        })
       ;
     },
     handler: argv => run(argv),
