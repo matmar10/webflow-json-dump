@@ -10,7 +10,7 @@
     "bluebird": "^3.7.2",
     "camel-case": "^4.1.2",
     "object-mapper": "^6.2.0",
-    "ora": "^5.4.0",
+    "ora": "^5.4.1",
     "webflow-api": "^0.5.1",
     "yargs": "^16.2.0"
   },
